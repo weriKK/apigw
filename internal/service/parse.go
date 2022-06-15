@@ -40,8 +40,8 @@ func mandatoryFieldCheck(sr ServiceRegistration) error {
 	}
 
 	for i, ep := range sr.Endpoints {
-		if ep.ApiRoot == "" {
-			missingFields = append(missingFields, fmt.Sprintf("endpoints[%d].apiRoot", i))
+		if ep.Path == "" {
+			missingFields = append(missingFields, fmt.Sprintf("endpoints[%d].path", i))
 		}
 		if len(ep.Methods) < 1 {
 			missingFields = append(missingFields, fmt.Sprintf("endpoints[%d].methods", i))

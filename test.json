@@ -1,14 +1,17 @@
 {
-    "name": "time",
+    "name": "notready-svc",
+    "host": "localhost",
+    "port": 8081,
+    "readinessPath": "/notreadyz",
     "endpoints": [
        {
-          "apiRoot": "/time/tick",
+          "path": "/time/tick",
           "methods": [
              "GET"
           ]
        },
        {
-          "apiRoot": "/time/tock",
+          "path": "/time/tock",
           "methods": [
              "DELETE",
              "POST"
